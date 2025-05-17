@@ -1,0 +1,422 @@
+/* ====== GLOBAL VARIABLES ====== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    /* Ensures the body spans the full height of the viewport */
+}
+
+/* ====== HEADER STRUCTURE ====== */
+header {
+    width: 100vw; /* Ensure header spans the full viewport width */
+    position: relative;
+}
+
+#header-top { /* Changed from .header-top to #header-top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
+#navbar-image { /* Changed from .navbar-image to #navbar-image */
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10em;
+}
+
+#navbar { /* Changed from .navbar to #navbar */
+    width: 100vw; /* Ensure navbar spans the full viewport width */
+    text-align: center;
+    margin-top: 0;
+    padding: 0.5rem 0;
+    background-color: #ffedd3; /* Ensure consistent background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #dcc48e;
+}
+
+#navbar-list { /* Changed from .navbar-list to #navbar-list */
+    display: flex;
+    /* Makes the links inline */
+    justify-content: center;
+    /* Centers the links */
+    gap: 1.5rem;
+    /* Adds spacing between links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* ====== MAIN LAYOUT ====== */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Layout wrapper */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-with-aside {
+    width: 100vw;
+    padding: 60px 20px;
+}
+
+.hero-row {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+    /* Center-align all elements */
+    gap: 2rem;
+    /* Add spacing between elements */
+}
+
+.hero-left {
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    border-radius: 12px;
+}
+
+/* ====== SECTION LAYOUT ====== */
+section {
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.services,
+.contact {
+    max-width: 1100px;
+    /* Align with other sections */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 2rem;
+    /* Add consistent padding */
+    text-align: center;
+    /* Center-align text */
+}
+
+
+.inline-section>div {
+    flex: 1;
+    padding: 1rem;
+}
+
+/* ====== JOBS PAGE LAYOUT ====== */
+.jobs-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping for responsiveness */
+    justify-content: center;
+    /* Center-align job sections */
+    gap: 2rem;
+    /* Add spacing between job sections */
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.job-section {
+    flex: 1 1 calc(33.333% - 2rem);
+    /* Ensure three sections per row with spacing */
+    min-width: 300px;
+    /* Minimum width for smaller screens */
+    max-width: 400px;
+    /* Limit maximum width */
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: left;
+    /* Align text to the left */
+}
+
+/* ===== TWO-COLUMN LAYOUT ====== */
+.two-column-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    /* Increase spacing between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column,
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ====== ABOUT PAGE LAYOUT ====== */
+.photo-aside {
+    position: absolute;
+    top: 10rem; /* Adjust to place it below the navbar */
+    right: 20px;
+    width: 300px;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Hide photo-aside on smaller screens */
+
+/* ====== APPLY ASIDE SECTION ====== */
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%; /* Ensure it adapts to smaller screens */
+}
+
+/* ====== FOOTER LAYOUT ====== */
+#footer { /* Changed from footer to #footer */
+    width: 100vw; /* Ensure footer spans the full viewport width */
+    background-color: #27233A;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    position: relative;
+    left: 0;
+}
+
+#footer ul { /* Changed from footer ul to #footer ul */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#footer ul li { /* Changed from footer ul li to #footer ul li */
+    display: inline;
+    position: relative;
+}
+
+#footer ul li:not(:last-child)::after {
+    content: "|";
+    margin-left: 0.5rem;
+    color: white;
+}
+
+/* ====== ABOUT PAGE TABLE STYLES ====== */
+#members-interests {
+    overflow-x: auto; /* Add horizontal scrolling for smaller screens */
+}
+
+#members-interests table {
+    width: 100%; /* Ensure the table spans the full width */
+    border-collapse: collapse; /* Remove gaps between table cells */
+    min-width: 600px; /* Ensure a minimum width for the table */
+}
+
+#members-interests th, #members-interests td {
+    padding: 0.75rem;
+    text-align: center;
+    border: 1px solid #dcc48e;
+    word-wrap: break-word; /* Ensure content wraps within cells */
+}
+
+@media (max-width: 768px) {
+    #members-interests table {
+        font-size: 0.8rem; /* Reduce font size for smaller screens */
+    }
+
+    #members-interests th, #members-interests td {
+        padding: 0.5rem; /* Reduce padding for smaller screens */
+    }
+
+    #members-interests {
+        overflow-x: auto; /* Add horizontal scrolling for smaller screens */
+    }
+}
+
+/* ====== MEDIA QUERIES ====== */
+
+@media (max-width: 1675px){
+    .photo-aside {
+        display: none; /* Hide photo-aside for better layout */
+    }
+}
+@media (max-width: 1200px) {
+    body {
+        padding: 0 20px; /* Add padding for smaller screens */
+    }
+
+    #navbar {
+        width: 100vw; /* Ensure navbar spans the full viewport width */
+    }
+
+    #footer {
+        width: 100vw; /* Ensure footer spans the full viewport width */
+    }
+
+    .main-wrapper, .container, .jobs-container {
+        max-width: 100%;
+        padding: 0 1rem; /* Adjust padding for responsiveness */
+    }
+
+    .photo-aside {
+        display: none; /* Hide photo-aside for better layout */
+    }
+
+    .jobs-container {
+        flex-direction: column; /* Stack job sections vertically */
+        align-items: center;
+    }
+
+    .job-section {
+        flex: 1 1 100%; /* Full width for job sections */
+        max-width: none;
+    }
+
+    #navbar-list { /* Changed from .navbar-list to #navbar-list */
+        flex-wrap: wrap; /* Allow wrapping for navigation links */
+        gap: 1rem; /* Adjust spacing between links */
+    }
+
+    .hero-row {
+        flex-direction: column; /* Stack hero section elements vertically */
+        align-items: center;
+    }
+
+    .hero-left {
+        max-width: 100%; /* Allow full width for hero content */
+    }
+}
+
+/* Mobile formatting for screens smaller than 768px */
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    #navbar {
+        width: 100vw; /* Ensure navbar spans the full viewport width */
+    }
+
+    #footer {
+        width: 100vw; /* Ensure footer spans the full viewport width */
+    }
+
+    #navbar-image { /* Changed from .navbar-image to #navbar-image */
+        display: none; /* Hide logo on mobile screens */
+    }
+
+    .main-wrapper, .container, .jobs-container {
+        max-width: 100%;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .jobs-container {
+        flex-direction: column; /* Stack job sections vertically */
+        align-items: center;
+    }
+
+    .job-section {
+        flex: 1 1 100%; /* Full width for job sections */
+        max-width: none;
+    }
+
+    .hiring-card, .testimonials, .photo-aside {
+        display: none; /* Hide unnecessary elements on mobile screens */
+    }
+
+    .hero-row {
+        flex-direction: column; /* Stack hero section elements vertically */
+        align-items: center;
+    }
+
+    .hero-left {
+        max-width: 100%; /* Allow full width for hero content */
+    }
+
+    /* Ensure parent container stacks sections vertically */
+    .services, .contact {
+        display: block; /* Stack sections vertically */
+        width: 100%; /* Full width for each section */
+        margin: 1rem 0; /* Add spacing between sections */
+        text-align: center; /* Center-align content */
+        padding: 1rem; /* Adjust padding for better spacing */
+    }
+
+    .two-column-layout {
+        flex-direction: column; /* Stack columns vertically */
+        gap: 1rem; /* Add spacing between stacked sections */
+    }
+
+    #footer { /* Changed from footer to #footer */
+        text-align: center; /* Center-align footer content */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .hero-content {
+        width: 100%; /* Full width on mobile */
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .hero-row {
+        align-items: center; /* Ensure all elements are centered */
+    }
+}
+
+.hero-content {
+    max-width: 1100px; /* Match the width of .services and .contact */
+    margin: 0 auto; /* Center horizontally */
+    text-align: center; /* Center-align text */
+    padding: 2rem; /* Add consistent padding */
+}
+
+.full-width-section {
+    width: 100%; /* Full width of the viewport */
+    margin: 0; /* Remove default margins */
+    padding: 2rem; /* Add padding for spacing */
+    background-color: #fff9ec; /* Match the section's background color */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
