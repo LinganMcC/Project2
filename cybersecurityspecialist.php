@@ -18,7 +18,8 @@
 <!-- Include navbar -->
 <?php include 'includes/navbar.inc.php'; ?>
 
-    </header>
+<!-- Include setting -->
+<?php include 'includes/setting.inc.php'; ?>
 
     <!-- ===== MAIN CONTENT ===== -->
     <article class="jobs-description">

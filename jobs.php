@@ -9,13 +9,16 @@
      <link href="styles/styles.css" rel="stylesheet">
      <link href="styles/layout.css" rel="stylesheet"></head>
 <body>
+
     <!-- Include navbar -->
     <?php include 'includes/navbar.inc.php'; ?>
-    <body>
+    <!-- Include setting -->
+    <?php include 'includes/setting.inc.php'; ?>
+
        <main>
       <article class="jobs-container">
   
- 
+
          <section  class="view-jobs">
          <p>Cloud Engineer - CEN19</p>
          <p class="description">As a cloud engineer, you are a technical expert who helps companies succeed with cloud-based storage, services, and infrastructure by building, maintaining, provisioning, securing, and optimizing digital systems that operate using cloud technology.</p>
