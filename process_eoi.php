@@ -104,6 +104,9 @@
 
             // Insert into database
             $sql = "INSERT INTO eoi (
+            JobReference, FirstName, LastName, StreetAddress, Suburb, State, Postcode,
+            EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, Skill4, Skill5, OtherSkills
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             JobReference, FirstName, LastName, gender, StreetAddress, Suburb, State, Postcode,
             EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, Skill4, Skill5, OtherSkills
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -112,6 +115,10 @@
             if ($stmt) {
                 mysqli_stmt_bind_param(
                     $stmt,
+                    "sssssssssssssss",
+                    $jobReference,
+                    $firstName,
+                    $lastName,
                     "ssssssssssssssss",
                     $jobReference,
                     $firstName,
