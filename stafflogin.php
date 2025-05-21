@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['manager_username'] = $user['username'];
                 $_SESSION['logged_in'] = true;
 
-                header("Location: dashboard.php"); // Change to your actual dashboard page
+                header("Location: manage.php"); 
                 exit();
             } else {
                 $errors[] = "Invalid password.";
