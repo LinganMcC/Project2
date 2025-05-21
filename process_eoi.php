@@ -103,10 +103,7 @@
             echo "<p><strong>Other Skills:</strong> $otherSkills</p>";
 
             // Insert into database
-            $sql = "INSERT INTO eoi (
-            JobReference, FirstName, LastName, StreetAddress, Suburb, State, Postcode,
-            EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, Skill4, Skill5, OtherSkills
-        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $sql = "INSERT INTO eoi(
             JobReference, FirstName, LastName, gender, StreetAddress, Suburb, State, Postcode,
             EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, Skill4, Skill5, OtherSkills
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
