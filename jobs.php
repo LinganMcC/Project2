@@ -13,7 +13,7 @@
     <!-- Include navbar -->
     <?php include 'includes/navbar.inc.php'; ?>
     <!-- Include setting -->
-    <?php include 'includes/setting.inc.php'; ?>
+    <?php include 'includes/settings.inc.php'; ?>
 
        <main>
       <article class="jobs-container">

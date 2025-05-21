@@ -26,7 +26,7 @@
     error_reporting(E_ALL);
 
 
-    require_once("settings.php"); // connection info
+    require_once("settings.inc.php"); // connection info
     $conn = mysqli_connect($host, $username, $password, $database);
     if (!$conn) {
         echo "<p>Database connection failure</p>";
