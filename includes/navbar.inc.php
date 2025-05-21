@@ -6,7 +6,7 @@ echo '
             <a href="index.html">
                 <img class="navbar-image" src="styles/images/logo.png" alt="EcruSoft Solutions Logo">
             </a>
-            <h1 class="header-title">The Faces Behind EcruSoft Solutions</h1>
+            <h1 class="header-title">EcruSoft Solutions</h1>
         </div>
         <nav class="navbar">
             <ul class="navbar-list">
@@ -18,4 +18,4 @@ echo '
         </nav>
     </header>
 </body>
-';?>
+';

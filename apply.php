@@ -25,9 +25,9 @@
             <label for="jobReference">Job Reference Number:</label>
             <select id="jobReference" name="jobReference" required>
               <option value="">Please Select</option>
-              <option value="ittechnician">IT Support Technician - ITT02</option>
-              <option value="cyberspecialist">Cyber Security Specialist - CSS44</option>
-              <option value="cloudengineer">Cloud Engineer - CEN19</option>
+              <option value="ITT02">IT Support Technician - ITT02</option>
+              <option value="CSS44">Cyber Security Specialist - CSS44</option>
+              <option value="CEN19">Cloud Engineer - CEN19</option>
             </select>
           </div>
         </fieldset>
