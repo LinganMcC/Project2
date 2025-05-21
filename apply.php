@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Sokhour KIM">
   <title>Apply Webpage</title>
-  <link href="styles/styles.css" rel="stylesheet">
-  <link href="styles/layout.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/layout.css">
 </head>
+
 <body>
-    <?php include 'includes/navbar.inc.php'; ?>
+  <?php include 'includes/navbar.inc.php'; ?>
   <!-- ===== MAIN CONTENT ===== -->
   <main>
     <div class="form-container">
@@ -103,15 +105,16 @@
         <!-- Step 6: Skills -->
         <fieldset>
           <legend>Step 6: Skills</legend>
-          <label><input type="checkbox" name="skills" value="programming" class="skill-checkbox"> Programming
+          <label><input type="checkbox" name="skills[]" value="Programming" class="skill-checkbox"> Programming
             Skills</label>
-          <label><input type="checkbox" name="skills" value="technical_troubleshooting" class="skill-checkbox">
+          <label><input type="checkbox" name="skills[]" value="Technical_troubleshooting" class="skill-checkbox">
             Technical Troubleshooting</label>
-          <label><input type="checkbox" name="skills" value="data_analysis" class="skill-checkbox"> Data
+          <label><input type="checkbox" name="skills[]" value="Data_analysis" class="skill-checkbox"> Data
             Analysis</label>
-          <label><input type="checkbox" name="skills" value="cloud_computing" class="skill-checkbox">
+          <label><input type="checkbox" name="skills[]" value="Cloud_computing" class="skill-checkbox">
             Cloud Computing</label>
-          <label><input type="checkbox" name="skills" value="digital_forensic" class="skill-checkbox"> Digital Forensic
+          <label><input type="checkbox" name="skills[]" value="Digital_forensic" class="skill-checkbox"> Digital
+            Forensic
           </label>&ensp;
           <div>
             <label for="otherSkills">Other Skills:</label>
@@ -124,7 +127,8 @@
       </form>
     </div>
   </main>
-    <!-- Include footer -->
-    <?php include 'includes/footer.inc.php'; ?>
+  <!-- Include footer -->
+  <?php include 'includes/footer.inc.php'; ?>
 </body>
+
 </html>
