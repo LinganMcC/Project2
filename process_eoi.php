@@ -112,11 +112,7 @@
             if ($stmt) {
                 mysqli_stmt_bind_param(
                     $stmt,
-                    "sssssssssssssss",
-                    $jobReference,
-                    $firstName,
-                    $lastName,
-                    "ssssssssssssssss",
+                    "ssssssssssssssss", // 16 's' for 16 string parameters
                     $jobReference,
                     $firstName,
                     $lastName,
