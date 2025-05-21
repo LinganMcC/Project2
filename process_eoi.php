@@ -48,6 +48,7 @@
         $jobReference   = sanitise_input($_POST["jobReference"]);
         $firstName      = sanitise_input($_POST["firstName"]);
         $lastName       = sanitise_input($_POST["lastName"]);
+        $gender         = sanitise_input($_POST["gender"]);
         $streetAddress  = sanitise_input($_POST["streetAddress"]);
         $suburb         = sanitise_input($_POST["suburb"]);
         $state          = sanitise_input($_POST["state"]);
@@ -91,6 +92,7 @@
             echo "<p><strong>Job Reference Number:</strong> $jobReference</p>";
             echo "<p><strong>First Name:</strong> $firstName</p>";
             echo "<p><strong>Last Name:</strong> $lastName</p>";
+            echo "<p><strong>Gender:</strong> $gender</p>";
             echo "<p><strong>Street Address:</strong> $streetAddress</p>";
             echo "<p><strong>Suburb:</strong> $suburb</p>";
             echo "<p><strong>State:</strong> $state</p>";
@@ -105,6 +107,9 @@
             JobReference, FirstName, LastName, StreetAddress, Suburb, State, Postcode,
             EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, Skill4, Skill5, OtherSkills
         ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            JobReference, FirstName, LastName, gender, StreetAddress, Suburb, State, Postcode,
+            EmailAddress, PhoneNumber, Skill1, Skill2, Skill3, Skill4, Skill5, OtherSkills
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             $stmt = mysqli_prepare($conn, $sql);
             if ($stmt) {
@@ -114,6 +119,11 @@
                     $jobReference,
                     $firstName,
                     $lastName,
+                    "ssssssssssssssss",
+                    $jobReference,
+                    $firstName,
+                    $lastName,
+                    $gender,
                     $streetAddress,
                     $suburb,
                     $state,
