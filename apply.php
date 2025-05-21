@@ -17,7 +17,7 @@
     <div class="form-container">
       <h2 class="form-header">Application Form</h2>
       <!-- Application form -->
-      <form id="regform" action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+      <form id="regform" action="process_eoi.php" method="post" novalidate=”novalidate">
         <!-- Step 1: Job Reference -->
         <fieldset>
           <legend>Step 1: Job Reference</legend>

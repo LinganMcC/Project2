@@ -3,6 +3,7 @@ CREATE TABLE eoi (
     JobReference VARCHAR(5) NOT NULL,
     FirstName VARCHAR(20) NOT NULL,
     LastName VARCHAR(20) NOT NULL,
+    Gender ENUM('Male', 'Female', 'Other') NOT NULL,
     StreetAddress VARCHAR(40) NOT NULL,
     Suburb VARCHAR(40) NOT NULL,
     State VARCHAR(3) NOT NULL,
