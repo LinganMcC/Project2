@@ -14,6 +14,7 @@ echo '
                 <li><a href="jobs.html">Careers</a></li>
                 <li><a href="apply.html">Apply</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="stafflogin.php">Staff</a></li>
             </ul>
         </nav>
     </header>
