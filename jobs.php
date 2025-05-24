@@ -1,5 +1,5 @@
 <?php
-include 'includes/setting.inc.php';
+include 'settings.php';
 ?>
 
 <!DOCTYPE html>

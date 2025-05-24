@@ -1,14 +1,15 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}include_once __DIR__ . '/settings.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-// Database connection details for XAMPP
-$host = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$database = 'managers';
+// Secret staff registration code 
+$secret_staff_code = 'MANAGER2025';
 
-// Connect to the database using mysqli
-$conn = new mysqli($host, $dbUsername, $dbPassword, $database);
+// Use the correct variables from settings.php
+$conn = new mysqli($host, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
