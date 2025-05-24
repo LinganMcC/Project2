@@ -1,5 +1,5 @@
 <?php
-include 'includes/setting.inc.php';
+include 'settings.php';
 
 $ref = isset($_GET['ref']) ? trim($_GET['ref']) : '';
 if (empty($ref)) {
@@ -83,3 +83,5 @@ $stmt->close();
 <?php include 'includes/footer.inc.php'; ?>
 </body>
 </html>
+
+<?php 

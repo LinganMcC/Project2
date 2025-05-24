@@ -14,9 +14,6 @@ ini_set('display_errors', 1);
   <link href="styles/layout.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Include header -->
-    <?php include 'includes/header.inc.php'; ?>
     <!-- Include navbar -->
     <?php include 'includes/navbar.inc.php'; ?>
   <!-- ===== MAIN LAYOUT ===== -->
