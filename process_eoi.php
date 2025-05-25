@@ -14,7 +14,8 @@
 <body>
     <?php include 'includes/header.inc.php'; ?>
     <br>
-    <h1> Application Form </h1><br>
+    <h2> Application Overview </h2>
+    <br>
     <?php
 
 
@@ -80,8 +81,7 @@
             echo "<div class='form-errors'>$errMsg</div>";
             echo "<p>Please go back and correct the errors. <a href=\"apply.html\">Return to form</a></p>";
         } else {
-            echo "<fieldset><h2>Application Submitted</h2>";
-            echo "<p><strong>Job Reference Number:</strong> $jobReference</p>";
+            echo "<fieldset><p><strong>Job Reference Number:</strong> $jobReference</p>";
             echo "<p><strong>First Name:</strong> $firstName</p>";
             echo "<p><strong>Last Name:</strong> $lastName</p>";
             echo "<p><strong>Gender:</strong> $gender</p>";
