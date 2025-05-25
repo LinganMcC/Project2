@@ -12,21 +12,13 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-top">
-            <a href="index.html">
-                <img class="navbar-image" src="styles/images/logo.png" alt="EcruSoft Solutions Logo">
-            </a>
-            <h1 class="header-title">The Faces Behind EcruSoft Solutions</h1>
-        </div>
-    </header>
-    <h1> Application Form </h1>
+    <?php include 'includes/header.inc.php'; ?>
+    <br>
+    <h1> Application Form </h1><br>
     <?php
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
 
 
-    require_once("settings.inc.php"); // connection info
+    require_once("settings.php"); // connection info
     $conn = mysqli_connect($host, $username, $password, $database);
     if (!$conn) {
         echo "<p>Database connection failure</p>";
@@ -88,7 +80,7 @@
             echo "<div class='form-errors'>$errMsg</div>";
             echo "<p>Please go back and correct the errors. <a href=\"apply.html\">Return to form</a></p>";
         } else {
-            echo "<h2>Application Submitted</h2>";
+            echo "<fieldset><h2>Application Submitted</h2>";
             echo "<p><strong>Job Reference Number:</strong> $jobReference</p>";
             echo "<p><strong>First Name:</strong> $firstName</p>";
             echo "<p><strong>Last Name:</strong> $lastName</p>";
@@ -100,7 +92,7 @@
             echo "<p><strong>Email Address:</strong> $emailAddress</p>";
             echo "<p><strong>Phone Number:</strong> $phoneNumber</p>";
             echo "<p><strong>Skills:</strong> " . implode(", ", $skills) . "</p>";
-            echo "<p><strong>Other Skills:</strong> $otherSkills</p>";
+            echo "<p><strong>Other Skills:</strong> $otherSkills</p></fieldset>";
 
             // Insert into database
             $sql = "INSERT INTO eoi(
@@ -112,7 +104,7 @@
             if ($stmt) {
                 mysqli_stmt_bind_param(
                     $stmt,
-                    "ssssssssssssssss", // 16 's' for 16 string parameters
+                    "ssssssssssssssss",
                     $jobReference,
                     $firstName,
                     $lastName,
@@ -140,7 +132,7 @@
 
         mysqli_close($conn);
     } else {
-        header("Location: apply.html");
+        header("Location: apply.php");
         exit();
     }
     ?>
