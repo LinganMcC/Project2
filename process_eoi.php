@@ -18,13 +18,34 @@
     <br>
     <?php
 
-
     require_once("settings.php"); // connection info
     $conn = mysqli_connect($host, $username, $password, $database);
     if (!$conn) {
         echo "<p>Database connection failure</p>";
         exit();
     }
+    // Create table if not exists
+    $sql = "
+CREATE TABLE IF NOT EXISTS eoi (
+    EOInumber INT AUTO_INCREMENT PRIMARY KEY,
+    JobReference varchar(5) NOT NULL,
+    FirstName varchar(20) NOT NULL,
+    LastName varchar(20) NOT NULL,
+    gender enum('Male','Female','Other') NOT NULL,
+    StreetAddress varchar(40) NOT NULL,
+    Suburb varchar(40) NOT NULL,
+    State varchar(3) NOT NULL,
+    Postcode varchar(4) NOT NULL,
+    EmailAddress varchar(255) NOT NULL,
+    PhoneNumber varchar(12) NOT NULL,
+    Skill1 varchar(255) ,
+    Skill2 varchar(255) ,
+    Skill3 varchar(255) ,
+    Skill4 varchar(255) ,
+    Skill5 varchar(255) ,
+    OtherSkills text,
+    Status enum('New','Current','Final') DEFAULT 'New'
+)";
 
     function sanitise_input($data)
     {
@@ -41,7 +62,7 @@
         $jobReference   = sanitise_input($_POST["jobReference"]);
         $firstName      = sanitise_input($_POST["firstName"]);
         $lastName       = sanitise_input($_POST["lastName"]);
-        $gender         = sanitise_input($_POST["gender"]);
+        $gender         = sanitise_input($_POST["gender"] ?? '');
         $streetAddress  = sanitise_input($_POST["streetAddress"]);
         $suburb         = sanitise_input($_POST["suburb"]);
         $state          = sanitise_input($_POST["state"]);
@@ -68,7 +89,7 @@
         }
 
         if (!filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
-            echo "Invalid email format.<br>";
+            $errMsg .= "<p>Invalid email format.</p>";
         }
 
         if (empty($postcode)) {
@@ -79,7 +100,7 @@
 
         if ($errMsg != "") {
             echo "<div class='form-errors'>$errMsg</div>";
-            echo "<p>Please go back and correct the errors. <a href=\"apply.html\">Return to form</a></p>";
+            echo "<p>Please go back and correct the errors. <a href=\"apply.php\">Return to form</a></p>";
         } else {
             echo "<fieldset><p><strong>Job Reference Number:</strong> $jobReference</p>";
             echo "<p><strong>First Name:</strong> $firstName</p>";
