@@ -1006,3 +1006,35 @@ footer {
     color: white;
     font-weight: bold;  
 }
+
+/* === Override form styling inside EOI management table === */
+table td form {
+    all: unset; /* Reset inherited styles */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+table td form select,
+table td form button {
+    all: unset;
+    font-family: inherit;
+    font-size: 0.95rem;
+    padding: 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+}
+
+table td form button {
+    background-color: #c62828;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+table td form button:hover {
+    background-color: #a31515;
+}
